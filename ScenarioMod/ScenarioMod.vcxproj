@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3D7D439E-B328-4352-AEA6-106C5CBD33D9}</ProjectGuid>
+    <RootNamespace>ScenarioMod</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/ScenarioMod.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\lua\src;.\mruby\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_ERNEL32_EXPORTS;_USE_MATH_DEFINES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\Debug/ScenarioMod.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions>/Zp1 /MP /D "_HAS_STD_BYTE=0" %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0411</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>.\Debug/ScenarioMod.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\ScenarioMod.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/ScenarioMod.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>.\Debug/ScenarioMod.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/ScenarioMod.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/ScenarioMod.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/Zp1 /MP /D "_HAS_STD_BYTE=0" %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>.\lua\src;.\mruby\;.\mruby\include;.%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_ERNEL32_EXPORTS;_USE_MATH_DEFINES;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile>.\Release/ScenarioMod.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DisableSpecificWarnings>4793;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0411</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions> /NODEFAULTLIB:LIBCMT  %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>.\Release/ScenarioMod.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\ScenarioMod.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Release/ScenarioMod.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>false</GenerateMapFile>
+      <SubSystem>Windows</SubSystem>
+      <StackReserveSize>8388603</StackReserveSize>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>.\Release/ScenarioMod.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/ScenarioMod.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Forms">
+      <CopyLocalSatelliteAssemblies>true</CopyLocalSatelliteAssemblies>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="mruby\ＭＲＵＢＹ〈interface〉.cpp" />
+    <ClCompile Include="エンディング情報型.cpp" />
+    <ClCompile Include="ダイクストラ〈接続情報〉.cpp" />
+    <ClCompile Include="ダイクストラ.cpp" />
+    <ClCompile Include="ダイクストラ〈城〉.cpp" />
+    <ClCompile Include="ダイクストラ〈描画〉.cpp" />
+    <ClCompile Include="ダイクストラ〈入出力〉.cpp" />
+    <ClCompile Include="ダイクストラ〈ノード〉.cpp" />
+    <ClCompile Include="lua\ＬＵＡ〈interface〉.cpp" />
+    <ClCompile Include="プロセスハンドル.cpp" />
+    <ClCompile Include="アプリケーション情報型.cpp" />
+    <ClCompile Include="エキスポート関数群.cpp" />
+    <ClCompile Include="カスタム駆動関数.cpp" />
+    <ClCompile Include="ゲームデータ構造.cpp" />
+    <ClCompile Include="コマンド情報型.cpp" />
+    <ClCompile Include="シナリオ情報型.cpp" />
+    <ClCompile Include="ダイアログ情報.cpp" />
+    <ClCompile Include="ダイアログ情報〈複〉.cpp" />
+    <ClCompile Include="デバッグ情報型.cpp" />
+    <ClCompile Include="デバッグ画像情報型.cpp" />
+    <ClCompile Include="フラグ情報型.cpp" />
+    <ClCompile Include="マネージドライブラリ.cpp" />
+    <ClCompile Include="メッセージ関連情報型.cpp" />
+    <ClCompile Include="効果音情報型.cpp" />
+    <ClCompile Include="動画情報型.cpp" />
+    <ClCompile Include="地域情報型.cpp" />
+    <ClCompile Include="城情報型.cpp" />
+    <ClCompile Include="大名情報型.cpp" />
+    <ClCompile Include="天気情報型.cpp" />
+    <ClCompile Include="官位情報型.cpp" />
+    <ClCompile Include="家宝情報型.cpp" />
+    <ClCompile Include="年情報型.cpp" />
+    <ClCompile Include="役職情報型.cpp" />
+    <ClCompile Include="待機武将情報.cpp" />
+    <ClCompile Include="情報ポインタ定義.cpp" />
+    <ClCompile Include="戦場情報型.cpp" />
+    <ClCompile Include="武将名前.cpp" />
+    <ClCompile Include="武将名字.cpp" />
+    <ClCompile Include="武将情報型.cpp" />
+    <ClCompile Include="環境情報型.cpp" />
+    <ClCompile Include="画面演出情報型.cpp" />
+    <ClCompile Include="相場情報型.cpp" />
+    <ClCompile Include="補助ライブラリ.cpp" />
+    <ClCompile Include="言葉遣い情報型.cpp" />
+    <ClCompile Include="軍団情報型.cpp" />
+    <ClCompile Include="部隊名情報型.cpp" />
+    <ClCompile Include="音楽情報型.cpp" />
+    <ClCompile Include="２Ｄ位置情報型.cpp" />
+    <ClCompile Include="３Ｄ位置情報型.cpp" />
+    <ClCompile Include="ＬＵＡ.cpp" />
+    <ClCompile Include="ＭＲＵＢＹ.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mruby\ＭＲＵＢＹ〈interface〉.h" />
+    <ClInclude Include="エンディング情報型.h" />
+    <ClInclude Include="コマンド情報列挙.h" />
+    <ClInclude Include="ダイアログ情報列挙.h" />
+    <ClInclude Include="ダイクストラ.h" />
+    <ClInclude Include="ダイクストラ〈城〉.h" />
+    <ClInclude Include="lua\ＬＵＡ〈interface〉.h" />
+    <ClInclude Include="プロセスハンドル.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="アプリケーション情報型.h" />
+    <ClInclude Include="カスタム条件情報型.h" />
+    <ClInclude Include="カスタム駆動関数.h" />
+    <ClInclude Include="ゲームデータ構造.h" />
+    <ClInclude Include="コマンド情報型.h" />
+    <ClInclude Include="シナリオ情報型.h" />
+    <ClInclude Include="ターン情報型.h" />
+    <ClInclude Include="ダイアログ情報型.h" />
+    <ClInclude Include="デバッグクラス.h" />
+    <ClInclude Include="デバッグ情報型.h" />
+    <ClInclude Include="デバッグ画像情報型.h" />
+    <ClInclude Include="フラグ情報型.h" />
+    <ClInclude Include="マネージドライブラリ.h" />
+    <ClInclude Include="メッセージ関連情報型.h" />
+    <ClInclude Include="効果音情報列挙.h" />
+    <ClInclude Include="効果音情報型.h" />
+    <ClInclude Include="動画情報列挙.h" />
+    <ClInclude Include="動画情報型.h" />
+    <ClInclude Include="地域情報列挙.h" />
+    <ClInclude Include="地域情報型.h" />
+    <ClInclude Include="城情報列挙.h" />
+    <ClInclude Include="城情報型.h" />
+    <ClInclude Include="大名情報列挙.h" />
+    <ClInclude Include="大名情報型.h" />
+    <ClInclude Include="天気情報列挙.h" />
+    <ClInclude Include="天気情報型.h" />
+    <ClInclude Include="官位情報列挙.h" />
+    <ClInclude Include="官位情報型.h" />
+    <ClInclude Include="家宝情報列挙.h" />
+    <ClInclude Include="家宝情報型.h" />
+    <ClInclude Include="役職情報列挙.h" />
+    <ClInclude Include="待機武将情報型.h" />
+    <ClInclude Include="戦場情報列挙.h" />
+    <ClInclude Include="暦情報型.h" />
+    <ClInclude Include="役職情報型.h" />
+    <ClInclude Include="情報メモリアドレス.h" />
+    <ClInclude Include="戦場情報型.h" />
+    <ClInclude Include="拡張セーブデータ情報.h" />
+    <ClInclude Include="暦情報列挙.h" />
+    <ClInclude Include="最大数.h" />
+    <ClInclude Include="武将情報列挙.h" />
+    <ClInclude Include="武将情報型.h" />
+    <ClInclude Include="環境設定情報列挙.h" />
+    <ClInclude Include="環境設定情報型.h" />
+    <ClInclude Include="画面演出情報型.h" />
+    <ClInclude Include="相場情報型.h" />
+    <ClInclude Include="補助ライブラリ.h" />
+    <ClInclude Include="言葉遣い情報型.h" />
+    <ClInclude Include="軍団情報型.h" />
+    <ClInclude Include="部隊名情報型.h" />
+    <ClInclude Include="音楽情報型.h" />
+    <ClInclude Include="２Ｄ位置情報型.h" />
+    <ClInclude Include="３Ｄ位置情報型.h" />
+    <ClInclude Include="ＬＵＡ.h" />
+    <ClInclude Include="ＭＲＵＢＹ.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ScenarioMod.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ScenarioMod.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="bgmmm\BGMmm.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
