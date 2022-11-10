@@ -5,7 +5,7 @@
  */
 #include <math.h>
 int round《整数化》(double a) {
-    return round(a);
+    return (int)round(a);
 }
 
 double round《二分の一吸着化》(double a) {
