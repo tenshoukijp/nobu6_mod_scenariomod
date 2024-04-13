@@ -53,8 +53,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2,8,0,3
- PRODUCTVERSION 2,8,0,3
+ FILEVERSION 2,8,2,1
+ PRODUCTVERSION 2,8,2,1
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -70,12 +70,12 @@ BEGIN
         BLOCK "041104b0"
         BEGIN
             VALUE "FileDescription", "天翔記 各人カスタム用･特殊MOD"
-			VALUE "FileVersion", "2.8.0.3"
+			VALUE "FileVersion", "2.8.2.1"
             VALUE "InternalName", "ScenarioMod"
             VALUE "LegalCopyright", "Powered by 天翔記.jp"
             VALUE "OriginalFilename", "ScenarioMod.dll"
             VALUE "ProductName", "天翔記 各人カスタム用･特殊MOD"
-            VALUE "ProductVersion", "2.8.0.3"
+            VALUE "ProductVersion", "2.8.2.1"
         END
     END
     BLOCK "VarFileInfo"

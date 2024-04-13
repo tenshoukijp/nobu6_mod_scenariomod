@@ -54,4 +54,5 @@ EXPORTS
 	snOnBornGeneralBushou = snOnBornGeneralBushou @ 52
 	snOnSkippedRekishiBushou = snOnSkippedRekishiBushou @ 53
 	snOnTaikiBushouDataTransfer = snOnTaikiBushouDataTransfer @ 54
+	snOnRequestFullcolorFaceFileName = snOnRequestFullcolorFaceFileName @ 55
 

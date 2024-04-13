@@ -706,7 +706,16 @@ void WINAPI snOnViewingMeijoMonogatari(int iCastleID, char *szBufTitle, char *sz
 }
 
 
-
+void WINAPI snOnRequestFullcolorFaceFileName(char* szOrgFileName, char* szDstFileName) {
+	try {
+		string ret = カスタム駆動関数.On_フルカラー顔グラファイル要求時(szOrgFileName);
+		if (ret.size() > 0) {
+			strncpy(szDstFileName, ret.c_str(), 98);
+			szDstFileName[99] = NULL;
+		}
+	}
+	catch (...) {}
+}
 
 extern 相場情報型 強制相場変更; // ScenarioMod内の今季の強制相場変更情報
 void WINAPI snOnChangeSoba(相場情報型* 相場変更伝達ポインタ) {

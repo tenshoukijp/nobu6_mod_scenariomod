@@ -281,6 +281,12 @@ string カスタム::On_家名表示直前(int 武将番号, string 家名) {
 	return NULL;
 }
 
+string カスタム::On_フルカラー顔グラファイル要求時(string ファイル名) {
+
+	// 変更しない場合""
+	return "";
+}
+
 int カスタム::On_音楽再生直前(int 再生予定番号) {
 
 	// 変更しない場合-1
