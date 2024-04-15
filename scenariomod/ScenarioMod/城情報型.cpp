@@ -22,7 +22,7 @@ string Get_城名( int 城番号【配列用】) {
 
 
 // 城名を設定する
-void   Set_城名( int 城番号【配列用】, string 城名 ) {
+void Set_城名( int 城番号【配列用】, string 城名 ) {
 
 	// 範囲チェック
 	if ( 0 <= 城番号【配列用】 && 城番号【配列用】 < 最大数::城情報::配列数 ) { 
@@ -38,7 +38,7 @@ void   Set_城名( int 城番号【配列用】, string 城名 ) {
 }
 
 // 勝手に文字列を決めうちせずに、TENSHOU.EXE内のポインタ配列から引っ張るようにした方が、他者の改造への耐久力が増すかも。
-char nb6CastleTypeName[最大数::城情報::配列数][5] = {
+char nb6CastleTypeName[7][7] = {
 	"城",
 	"御坊",
 	"寺",
@@ -49,7 +49,7 @@ char nb6CastleTypeName[最大数::城情報::配列数][5] = {
 };
 
 // 城のタイプIDから具体的な文字列を得る
-char *getCastleTypeName(int iCastleType) {
+string getCastleTypeName(int iCastleType) {
 	if ( iCastleType == 0x00 ) {
 		return nb6CastleTypeName[0];
 	}
